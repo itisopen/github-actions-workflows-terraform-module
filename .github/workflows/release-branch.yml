@@ -19,7 +19,7 @@ name: |-
     
     jobs:
       terraform-module:
-        uses: cloudposse/github-actions-workflows-terraform-module/.github/workflows/release-branch.yml@main
+        uses: itisopen/github-actions-workflows-terraform-module/.github/workflows/release-branch.yml@itisopen
         secrets:
           github_access_token: $\{\{ secrets.REPO_ACCESS_TOKEN \}\}
   ```
@@ -43,20 +43,20 @@ concurrency:
 
 jobs:
   ci-terraform:
-    uses: cloudposse/github-actions-workflows/.github/workflows/ci-terraform.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/ci-terraform.yml@itisopen
     with:
       filter-mode: nofilter
       suggestions: false
       runs-on: ${{ inputs.runs-on }}
 
   ci-readme:
-    uses: cloudposse/github-actions-workflows/.github/workflows/ci-readme.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/ci-readme.yml@itisopen
     with:
       runs-on: ${{ inputs.runs-on }}
     secrets: inherit
     
   ci-codeowners:
-    uses: cloudposse/github-actions-workflows/.github/workflows/ci-codeowners.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/ci-codeowners.yml@itisopen
     with:
       is_fork: false
       runs-on: ${{ inputs.runs-on }}
@@ -65,7 +65,7 @@ jobs:
 
   auto-release:
     needs: [ci-terraform, ci-readme, ci-codeowners]
-    uses: cloudposse/.github/.github/workflows/shared-auto-release.yml@main
+    uses: itisopen/.github/.github/workflows/shared-auto-release.yml@itisopen
     with:
       runs-on: ${{ inputs.runs-on }}    
       publish: true

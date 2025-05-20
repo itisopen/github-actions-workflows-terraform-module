@@ -18,7 +18,7 @@ name: |-
     
     jobs:
       scheduled:
-        uses: cloudposse/github-actions-workflows-terraform-module/.github/workflows/scheduled.yml@main
+        uses: itisopen/github-actions-workflows-terraform-module/.github/workflows/scheduled.yml@itisopen
         secrets:
           REPO_ACCESS_TOKEN: $\{\{ secrets.REPO_ACCESS_TOKEN \}\}
   ```
@@ -42,14 +42,14 @@ concurrency:
 
 jobs:
   context:
-    uses: cloudposse/github-actions-workflows/.github/workflows/scheduled-context.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/scheduled-context.yml@itisopen
     with:
       runs-on: ${{ inputs.runs-on }}
     secrets:
       github_access_token: ${{ secrets.REPO_ACCESS_TOKEN }}
 
   readme:
-    uses: cloudposse/github-actions-workflows/.github/workflows/scheduled-readme.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/scheduled-readme.yml@itisopen
     with:
       runs-on: ${{ inputs.runs-on }}
     secrets: inherit

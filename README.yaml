@@ -21,21 +21,21 @@ tags:
 license: "APACHE2"
 
 # Canonical GitHub repo
-github_repo: cloudposse/github-actions-workflows-terraform-module
+github_repo: itisopen/github-actions-workflows-terraform-module
 
 # Badges to display
 badges:
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse/github-actions-workflows-terraform-module.svg"
-    url: "https://github.com/cloudposse/github-actions-workflows-terraform-module/releases/latest"
+    image: "https://img.shields.io/github/release/itisopen/github-actions-workflows-terraform-module.svg"
+    url: "https://github.com/itisopen/github-actions-workflows-terraform-module/releases/latest"
   - name: "Slack Community"
-    image: "https://slack.cloudposse.com/badge.svg"
-    url: "https://slack.cloudposse.com"
+    image: "https://slack.itisopen.net/badge.svg"
+    url: "https://slack.itisopen.net"
 
 related:
   - name: "github-actions-workflows"
     description: "Reusable workflows for different types of projects"
-    url: "https://github.com/cloudposse/github-actions-workflows"
+    url: "https://github.com/itisopen/github-actions-workflows"
 
 # Short description of this project
 description: |-
@@ -48,7 +48,7 @@ introduction: |-
 references:
   - name: "terraform-example-module"
     description: "Example application for CI/CD demonstrations of GitHub Actions deal with Docker, ECR, EKS and Helmfile"
-    url: "https://github.com/cloudposse/terraform-example-module"
+    url: "https://github.com/itisopen/terraform-example-module"
 
 include:
   - "docs/github-actions-reusable-workflows.md"
@@ -59,3 +59,5 @@ contributors:
     github: "goruha"
   - name: "Max Lobur"
     github: "max-lobur"
+  - name: "Patrice Lachance"
+    github: "patlachance"

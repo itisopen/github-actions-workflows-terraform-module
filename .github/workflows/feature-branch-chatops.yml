@@ -18,7 +18,7 @@ name: |-
     
     jobs:
       terraform-module:
-        uses: cloudposse/github-actions-workflows-terraform-module/.github/workflows/feature-branch-chatops.yml@main
+        uses: itisopen/github-actions-workflows-terraform-module/.github/workflows/feature-branch-chatops.yml@itisopen
         secrets:
           github_access_token: $\{\{ secrets.REPO_ACCESS_TOKEN \}\}
   ```
@@ -42,7 +42,7 @@ concurrency:
 
 jobs:
   ci-terraform-chatops:
-    uses: cloudposse/github-actions-workflows/.github/workflows/ci-terraform-chatops.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/ci-terraform-chatops.yml@itisopen
     with:
       runs-on: ${{ inputs.runs-on }}
     secrets:

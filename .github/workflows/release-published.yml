@@ -18,7 +18,7 @@ name: |-
     
     jobs:
       terraform-module:
-        uses: cloudposse/github-actions-workflows-terraform-module/.github/workflows/release-published.yml@main
+        uses: itisopen/github-actions-workflows-terraform-module/.github/workflows/release-published.yml@itisopen
 
   ```
 
@@ -37,7 +37,7 @@ concurrency:
 
 jobs:
   release:
-    uses: cloudposse/.github/.github/workflows/shared-release-branches.yml@main
+    uses: itisopen/.github/.github/workflows/shared-release-branches.yml@itisopen
     with:
       runs-on: ${{ inputs.runs-on }}    
     secrets: inherit

@@ -19,7 +19,7 @@ name: |-
     
     jobs:
       terraform-module:
-        uses: cloudposse/github-actions-workflows-terraform-module/.github/workflows/feature-branch.yml@main
+        uses: itisopen/github-actions-workflows-terraform-module/.github/workflows/feature-branch.yml@itisopen
         secrets:
           github_access_token: $\{\{ secrets.REPO_ACCESS_TOKEN \}\}
   ```
@@ -43,7 +43,7 @@ concurrency:
 
 jobs:
   ci-terraform:
-    uses: cloudposse/github-actions-workflows/.github/workflows/ci-terraform.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/ci-terraform.yml@itisopen
     with:
       # Workaround for https://github.com/community/community/discussions/9099
       # We should switch to nofilter once it's fixed
@@ -52,7 +52,7 @@ jobs:
       runs-on: ${{ inputs.runs-on }}
 
   ci-codeowners:
-    uses: cloudposse/github-actions-workflows/.github/workflows/ci-codeowners.yml@main
+    uses: itisopen/github-actions-workflows/.github/workflows/ci-codeowners.yml@itisopen
     with:
       is_fork: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
       runs-on: ${{ inputs.runs-on }}
@@ -62,7 +62,7 @@ jobs:
   ci-labels:
     runs-on: ${{ fromJSON(inputs.runs-on) }}
     steps:
-      - uses: cloudposse/github-action-release-label-validator@v1
+      - uses: itisopen/github-action-release-label-validator@v1
 
   ci:
     runs-on: ${{ fromJSON(inputs.runs-on) }}
